@@ -1,0 +1,2 @@
+docker run -it --rm  --name etm-dev -v $(pwd):/etm -p 4096:4096 ray0523/etm_base /bin/bash -c "npm install https://github.com/entanmo/etm-js.git  https://github.com/entanmo/etm-vm.git && npm install && node app.js"
+# docker run -d  --name etm-dev -v $(pwd):/etm -p 4097:4096 ray0523/etm_base /bin/bash -c "npm install https://github.com/entanmo/etm-js.git  https://github.com/entanmo/etm-vm.git&& npm install && node app.js"
