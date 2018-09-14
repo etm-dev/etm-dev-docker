@@ -50,5 +50,35 @@ debug 2018-09-13 01:44:22 370 transport.js:733 Request { url: 'http://52.187.232
 
 ---------------------------------------------------
 
-# 启动钱包（请见下回讲解）
+# 启动钱包
+
+## clone钱包代码
+` git clone https://github.com/entanmo/etm-wallet.git `
+
+## 进入钱包代码主目录
+
+```
+cd etm-wallet
+vi config/ip.js //修改ip地址为本地etm主链ip端口
+./dockerStartWallet.sh //运行脚本
+```
+
+#### 脚本解释
+` docker run -d  --name etm-wallet -w /etm  -v $(pwd):/etm -p 8888:8080  node /bin/bash -c "npm install && npm run dev" ` 
+
+- node 代表标准的node环境
+- -c "npm install && npm run dev" ： 编译安装
+
+## 运行成功
+` I  Your application is running here: http://0.0.0.0:8080 `
+
+> ps:此处注意host必须是0.0.0.0，docker中不认localhost
+
+
+----------------
+
+# 安装dapp(helloworld)(请见下回分解)
+
+
+
 
